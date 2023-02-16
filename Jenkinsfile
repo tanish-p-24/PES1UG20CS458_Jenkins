@@ -2,18 +2,18 @@ pipeline {
     agent any
 
     stages {
-        stage('Build Stage') {
+        stage('Build') {
             steps {
                 sh 'make'
                 sh 'g++ "main/PES1UG20CS458.cpp"'
             }
         }
-        stage('Testing Stage') {
+        stage('Test') {
             steps {
                 sh './a.out'
             }
         }
-        stage('Deploy Stage') {
+        stage('Deploy') {
             steps {
                 sh 'make install'
             }
