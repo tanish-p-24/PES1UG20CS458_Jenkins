@@ -5,11 +5,12 @@ pipeline {
         stage('Build Stage') {
             steps {
                 sh 'make'
+                sh 'g++ "main/PES1UG20CS458.cpp"'
             }
         }
         stage('Testing Stage') {
             steps {
-                sh './test'
+                sh './a.out'
             }
         }
         stage('Deploy Stage') {
