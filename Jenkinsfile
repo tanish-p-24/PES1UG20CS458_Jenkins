@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './main/Makefile'
+                sh 'g++ -o hello ./main/hello.cpp'
                
             }
         }
@@ -17,9 +17,6 @@ pipeline {
     }
 
     post {
-        always {
-            junit '**/test-results.xml'
-        }
         failure {
             echo 'pipeline failed'
         }
