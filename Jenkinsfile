@@ -13,11 +13,7 @@ pipeline {
                 sh './hello_exec.out'
             }
         }
-        stage('Deploy') {
-            steps {
-                sh 'make install'
-            }
-        }
+      
     }
 
     post {
