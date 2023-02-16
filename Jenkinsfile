@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'make'
+                sh 'Makefile'
                
             }
         }
         stage('Test') {
             steps {
-                sh './a.out'
+                sh './hello_exec.out'
             }
         }
         stage('Deploy') {
